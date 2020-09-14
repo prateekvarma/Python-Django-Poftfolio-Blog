@@ -1,3 +1,6 @@
+{% extends 'portfolio/base.html' %}
+{% block content %}
+
 There are {{ blogs.count }} blog{{ blogs.count|pluralize }}
 
 {% for blog in blogs %}
@@ -5,3 +8,5 @@ There are {{ blogs.count }} blog{{ blogs.count|pluralize }}
     <h5>{{ blog.date }}</h5>
     <p>{{ blog.description|truncatechars:50 }}</p>
 {% endfor %}
+
+{% endblock %}
